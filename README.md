@@ -1,4 +1,6 @@
 # Crickulator
+
+[![Join the chat at https://gitter.im/Crickulator/Lobby](https://badges.gitter.im/Crickulator/Lobby.svg)](https://gitter.im/Crickulator/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Open Source Temperature Conversion Tool
 
 Welcome!  
