@@ -15,7 +15,8 @@ def convert(args):
     output_unit = conversions[args.output]
 
     if input_unit.get_category() != output_unit.get_category():
-        print "%s cannot be converted to %s." % input_unit.get_name(), output_unit.get_name()
+        print "%s cannot be converted to %s." % (input_unit.get_name(), output_unit.get_name())
+        sys.exit(1)
 
     value_in_base_units = input_unit.convert_to_base(args.to_convert[0])
     value_in_output_units = output_unit.convert_from_base(value_in_base_units)
