@@ -1,16 +1,28 @@
 #!/usr/bin/env python
+import argparse
 
-print"This program converts temperatures between Fahrenheit, Celsius, Kelvin, and Bug chirps."
-temp, unit = raw_input("Please enter the temperature and the unit (F, C, K, or B): ").split()
-temp = int(temp)
-print temp
-print unit
+def convert(args):
+    # This function needs a better way to check inputs
+    if args.input == "fahrenheit":
+        function = {
+            "celsius": lambda temp: (temp - 32) / 1.8,
+            "kelvin": lambda temp: (temp + 459.67) * .55,
+            "chirps": lambda temp: (temp - 40) * 4
+        }[args.output]
+    else:
+        raise Exception("Only fahrenheit support currently")
+    print function(args.to_convert[0])
 
-if unit == "F":
-        celsius = (temp - 32) / 1.8
-        kelvin = (temp + 459.67) * .55
-        chirps = (temp - 40) * 4
-        print("%d degrees Fahrenheit equals:\n\t%d Celsius\n\t%d Kelvin\n\t%d cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="This program converts temperatures between Fahrenheit, Celsius, Kelvin, and Bug chirps.")
+    parser.add_argument("to_convert", metavar="N", type=float, nargs=1, help="The value to convert")
+    parser.add_argument("-i", "--input", help="The units of N", required=True)
+    parser.add_argument("-o", "--output", help="The units of the result", required=True)
+
+    args = parser.parse_args()
+    convert(args)
 
 #nope, didn't make up the cricket thing:  http://www.scientificamerican.com/article/bring-science-home-cricket-temperature/
 #write tests first
