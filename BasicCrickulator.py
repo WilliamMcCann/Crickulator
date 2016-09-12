@@ -30,21 +30,21 @@ if unit == "F":
 
 if unit == "C":
         fahrenheit = temp * 1.8 + 32
-        kelvin = (temp + 459.67) * .55
-        chirps = (temp - 40) * 4 * 1.0
-        print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
+        kelvin = temp + 273.15
+        chirps = (fahrenheit - 40) * 4 * 1.0
+        print("%f degrees Celsius equals:\n\t%f Fahrenheit\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, fahrenheit, kelvin, chirps)
 
 if unit == "K":
-        celsius = temp + 273.15
+        celsius = temp - 273.15
         fahrenheit = temp * 1.8 - 459.67
-        chirps = 
-        print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
+        chirps = (fahrenheit - 40) * 4 * 1.0
+        print("%f degrees Kelvin equals:\n\t%f Celsius\n\t%f Fahrenheit\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
 
 if unit == "B":
-        celsius = 
-        kelvin = 
-        fahrenheit = 
-        print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)        
+        fahrenheit = (temp / 4) + 40
+        celsius = (fahrenheit - 32) * 1.0 / 1.8
+        kelvin = celsius - 273.15
+        print("%f Bug Chirps per minute equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f Fahrenheit\n") % (temp, celsius, kelvin, fahrenheit)        
 
 #nope, didn't make up the cricket thing:  http://www.scientificamerican.com/article/bring-science-home-cricket-temperature/
 #write tests first
