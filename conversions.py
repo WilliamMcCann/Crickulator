@@ -6,6 +6,7 @@ same category.
 
 Base units:
 temperature: fahrenheit
+energy:      joule
 """
 
 conversions = {
@@ -33,4 +34,28 @@ conversions = {
         lambda temp: temp/4 + 40,
         lambda temp: (temp - 40) * 4,
     ),
+    "joules": Unit(
+        "Joules",
+        "energy",
+        lambda energy: energy,
+        lambda energy: energy,
+    ),
+    "calories": Unit(
+        "Calories",
+        "energy",
+        lambda energy: energy * 4.1868,
+        lambda energy: energy / 4.1868,
+    ),
+    "kilocalories": Unit(
+        "Kilocalories",
+        "energy",
+        lambda energy: energy * 4186.8,
+        lambda energy: energy / 4186.8,
+    ),
+    "watt hours": Unit(
+        "Watt hours",
+        "energy",
+        lambda energy: energy * 3600,
+        lambda energy: energy / 3600,
+    )
 }
