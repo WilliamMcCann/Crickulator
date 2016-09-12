@@ -29,13 +29,22 @@ if unit == "F":
         print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
 
 if unit == "C":
-        pass
+        fahrenheit = 
+        kelvin = (temp + 459.67) * .55
+        chirps = (temp - 40) * 4 * 1.0
+        print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
 
 if unit == "K":
-        pass
+        celsius = (temp - 32) * 1.0 / 1.8
+        fahrenheit = 
+        chirps = (temp - 40) * 4 * 1.0
+        print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
 
 if unit == "B":
-        pass        
+        celsius = (temp - 32) * 1.0 / 1.8
+        kelvin = (temp + 459.67) * .55
+        fahrenheit = 
+        print("%f degrees Fahrenheit equals:\n\t%f Celsius\n\t%f Kelvin\n\t%f cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)        
 
 #nope, didn't make up the cricket thing:  http://www.scientificamerican.com/article/bring-science-home-cricket-temperature/
 #write tests first
