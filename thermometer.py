@@ -4,12 +4,25 @@ import sys
 from conversions import conversions
 
 def convert(args):
+<<<<<<< HEAD
     if args.input not in conversions:
         print args.input, "is not a recognized unit."
         sys.exit(1)
     if args.output not in conversions:
         print args.output, "is not a recognized unit."
         sys.exit(1)
+=======
+    # This function needs a better way to check inputs
+    if args.input == "fahrenheit":
+        function = {
+            "celsius": lambda temp: (temp - 32) * 1.0 / 1.8,
+            "kelvin": lambda temp: (temp + 459.67) * .55,
+            "chirps": lambda temp: (temp - 40) * 4 * 1.0
+        }[args.output]
+    else:
+        raise Exception("Only fahrenheit support currently")
+    print function(args.to_convert[0])
+>>>>>>> ef2307e830590e0ad9cbbc81edadf4c8b7e92081
 
     input_unit = conversions[args.input]
     output_unit = conversions[args.output]
@@ -35,7 +48,6 @@ if __name__ == "__main__":
 #nope, didn't make up the cricket thing:  http://www.scientificamerican.com/article/bring-science-home-cricket-temperature/
 #write tests first
 #needs to handle negatives --I think they are being handled?
-#could have better accuracy if using floats not ints everywhere?
 #include over 100 F "too hot for crickets" and under 55 F "too cold for crickets", also a funny message for below freezing "cricketsicles don't chirp"?
 #include funny message for lower than abs zero
 #include funny message about "at -40 it's so cold that no one cares if it's F or C"
