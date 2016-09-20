@@ -12,6 +12,28 @@ if unit == "F":
         chirps = ((temp - 40) *1.0) * 4
         print("%d degrees Fahrenheit equals:\n\t%d Celsius\n\t%d Kelvin\n\t%d cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
 
+if unit == "C":
+        fahr = ((temp * 1.8) + 32
+        kelvin = temp + 273.2
+        chirps = ((temp - 8) * 6.0
+        print("%d degrees Celsius equals:\n\t%d Fahrenheit\n\t%d Kelvin\n\t%d cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
+
+if unit == "K":
+        celsius = ((temp - 32) * 1.0) / 1.8
+        kelvin = (temp + 459.67) * .55
+        chirps = ((temp - 40) *1.0) * 4
+        print("%d degrees Fahrenheit equals:\n\t%d Celsius\n\t%d Kelvin\n\t%d cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
+
+if unit == "B":
+        celsius = ((temp - 32) * 1.0) / 1.8
+        kelvin = (temp + 459.67) * .55
+        chirps = ((temp - 40) *1.0) * 4
+        print("%d degrees Fahrenheit equals:\n\t%d Celsius\n\t%d Kelvin\n\t%d cricket chirps per minute\n") % (temp, celsius, kelvin, chirps)
+
+
+
+
+
 #nope, didn't make up the cricket thing:  http://www.scientificamerican.com/article/bring-science-home-cricket-temperature/
 #write tests first
 #needs to handle negatives
